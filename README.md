@@ -31,3 +31,15 @@ def train_step(...):
 * * `if should_stop` then the `while` loop breaks, else it continues till the training completes.
 * `def main` ends with logging a `done training` message.
 
+## Important files, links
+* The BART paper -- <https://arxiv.org/pdf/1910.13461.pdf>
+* The main `while` loop involed by `fairseq-train` -- <https://github.com/pytorch/fairseq/blob/master/fairseq_cli/train.py#L117>
+* Class for `Trainer` that implements the `train_step` for a list of samples in an epoch -- <https://github.com/pytorch/fairseq/blob/master/fairseq/trainer.py#L39>
+* The `Task` class; summarization is implemented as a `Translation` task -- <https://github.com/pytorch/fairseq/blob/master/fairseq/tasks/fairseq_task.py>
+* The `bart.base` model reigistration, along with all model params and arguments -- <https://github.com/pytorch/fairseq/blob/master/fairseq/models/bart/model.py#L297>
+* Issue for mismatch in BASE and LARGE vocab sizes; fix is to change the truncate the weights and save -- <https://github.com/pytorch/fairseq/issues/2242>
+* Issue for fine-tuning with limited resources; lots of useful tips -- <https://github.com/pytorch/fairseq/issues/1413>
+* Issue for fine-tuning with different vocab sizes -- <https://github.com/pytorch/fairseq/issues/2120>
+* Issue discussing the confusion on `MAX_TOKENS` in Bart for Summarization (**the README is broken**) -- <https://github.com/pytorch/fairseq/issues/1685>
+* Issue regarding training time, resources for BARTBase  -- <https://github.com/pytorch/fairseq/issues/1651>
+* HgfT explain their fine-tuning procedure -- <https://huggingface.co/transformers/training.html>
