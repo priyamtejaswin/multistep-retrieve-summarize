@@ -6,6 +6,11 @@ Everything else will be ignored.
 * Use `gdown`
 * Follow instructions in the repo <https://github.com/artmatsak/cnn-dailymail.git>
 
+# Gigawords
+* Info at <https://www.tensorflow.org/datasets/catalog/gigaword>
+* GDrive dl link at <https://github.com/tensorflow/datasets/blob/master/tensorflow_datasets/summarization/gigaword.py#L57>
+* Some pre-processing is also explained in the tf code ^above^.
+
 ```
 pip install gdown
 
